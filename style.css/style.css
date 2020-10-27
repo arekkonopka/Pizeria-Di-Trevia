@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header */
+
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/pizza-3007395_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.8;
+    z-index: 1;
+}
+.welcome{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width:  100%;
+   height: 10vh;
+   text-align: center;
+   color: white;
+   text-shadow: 3px 1.5px black;
+}
+.welcome h1{
+    font-family: 'Italiana', serif;
+    font-size: 100px;
+}
+
+
+/* header burger menu - icon */
+.burger{
+    position: fixed;
+    top: 5vh;
+    right: 2vw;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+}
+span{
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background-color: white; 
+    border-radius: 3px;
+    text-shadow: 3px 1.5px black;
+    transition: top .2s, opacity 0.3s ,transform .2s .2s;
+    box-shadow: 0px 0px 3px black;
+}
+.burger span:nth-child(1){
+    top: 0;
+    left:0;
+}
+.burger span:nth-child(2){
+    top: calc(50% - 5px);
+    left:0;
+    opacity: 1;
+    /* transition: all .3s; */
+  }
+.burger span:nth-child(3){
+    top: calc(100% - 10px);
+    left:0;
+}
+
+.burger.active span:nth-child(1){
+    top: calc(50% - 5px);
+    left:0;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.burger.active span:nth-child(2){
+   opacity: 0;
+}
+.burger.active span:nth-child(3){
+    top: calc(50% - 5px);
+    left:0;
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+/* slide menu */
+.slidemenu{
+    position: fixed;
+    top:0;
+    right: -100%;
+    width: 40vh;
+    height: 100%;
+    background-color: rgba(206, 32, 32,1);
+    transition: 0.4s;
+}
+.slidemenu ul{
+    margin-top: 50%;
+    list-style: none;
+}
+.slidemenu ul a{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.slidemenu a li{
+    width: 90%;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 10vh;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+}
+.slidemenu a li i {
+    font-size: 28px;
+    padding-right: 10px;
+}
+.slidemenu a:nth-child(2) li:hover {
+    color: red;
+    font-size: 32px;
+}
+.slidemenu li:hover{
+    background-color: rgb(139, 6, 6);
+    color: white;
+    text-shadow: 1px 1px red;
+}
+.slidemenu.active{
+    top:0;
+    right: 0;
+}
+
+/* section menu */
+
+section#menu{
+    background-color: #EC7063;
+}
+#menu h1{
+  width: 100%;
+  height: 10vh;
+  padding:0 40px ;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 60px;
+  color: white;
+}
+.wrapper-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.wrapper-menu .components{
+  flex-basis: 350px;
+  margin: 20px 50px 10% 50px;
+  
+}
+.wrapper-menu .components a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.components a p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  transition: 0.3s;
+  text-align: center;
+  color: white;
+}
+.components a:hover p{
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.5);
+  }
+
+
+.wrapper-menu .components:nth-child(1) a{
+  background-image: url('/img/cheese-1869708_640.jpg');
+}
+.wrapper-menu .components:nth-child(2) a{
+  background-image: url('/img/pizza-1209748_640.jpg');
+}
+.wrapper-menu .components:nth-child(3) a{
+  background-image: url("/img/pizza-3000274_640.jpg");
+
+}
+.wrapper-menu .components:nth-child(4) a{
+  background-image: url("/img/pizza-711662_640.jpg");
+
+}
+.wrapper-menu .components:nth-child(5) a{
+  background-image: url("/img/pizza-3298685_640.jpg");
+
+}
+.wrapper-menu .components:nth-child(6) a{
+  background-image: url("/img/pizza-386717_640.jpg");
+  background-position: bottom;
+
+}
+.wrapper-menu .components:nth-child(7) a{
+  background-image: url("/img/pizza-5275191_640.jpg");
+
+}
+
+.components a+p{
+    padding-top: 10px;
+    font-size: 20px;  
+}
+
+/* O nas */
+
+section#about{
+    background-image: linear-gradient(0deg, white, #ff1900);
+    position: relative; 
+    width: 100%;
+    height: 300vh;
+}
+#about>h1{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+.wrapp1 {
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    top: 20vh;
+    left:0%;
+    transition: 2s;   
+}
+.wrapp1 .img{
+    background-image: url('/img/chihuahua\ -\ boss_Easy-Resize.com.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    width: 40%;
+    height: 100%;
+    transform: translate(10%,10%);
+} 
+
+.wrapp1 .person{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 40%;
+}
+.person h1{
+    font-size:26px;
+    padding: 10px;
+}
+.person p{
+    font-size: 18px;
+    padding: 10px;
+}
+
+#about .wrapp2{
+    position: absolute;
+    top: 120vh;
+    right:0%;
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    transition: 0.3s;
+}
+
+.wrapp2 .img{
+    background-image: url('/img/chihuahua\ -\ chief.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: 60%, 0; 
+    width: 40%;
+    height: 100%;
+    transform: translate(10%,10%);
+} 
+
+.wrapp2 .person{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 40%;
+}
+.person h1{
+    font-size:26px;
+    padding: 10px;
+}
+.person p{
+    font-size: 18px;
+    padding: 10px;
+}
+
+#about .wrapp3 {
+    position: absolute;
+    top: 220vh;
+    left:-100%;
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    transition: 0.3s;
+}
+
+.wrapp3 .img{
+    background-image: url('/img/chihuahu\ -\ menager_Easy-Resize.com.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    width: 40%;
+    height: 100%;
+    transform: translate(10%,10%);
+} 
+
+.wrapp3 .person {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 40%;
+}
+.person h1{
+    font-size:26px;
+    padding: 10px;
+}
+.person p{
+    font-size: 18px;
+    padding: 10px;
+}
+#about .wrapp1.go{
+    left: 0;
+}
+#about .wrapp2.go{
+    right: 0;
+}
+#about .wrapp3.go{
+    left: 0;
+}
+
+/* section contact */
+
+#contact{
+    background-image: url('/img/brick-wall-1834784_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+height: 100vh;
+}
+.contact-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+#contact .flex{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.contact-content > h1{
+    height: 15vh;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    line-height: 15vh;
+    padding: 0 10% 0 0;
+  text-indent: 5%;
+
+}
+.contact-content > h1::after{
+    content:"";
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+.contacts{
+    flex-basis: 33vw;
+    height: 25vh;
+    flex-grow: 1;
+    color: white;
+    padding: 5%;
+}
+.contacts h1{
+    font-size: 25px;
+    padding: 10px;
+}
+.contacts p{
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+}
