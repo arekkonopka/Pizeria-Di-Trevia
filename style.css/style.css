@@ -585,11 +585,11 @@ section#about{
 .wrapp1 {
     position: absolute;
     top: 20vh;
-    left:0%;
+    left:-100%;
     width: 70vw;
     height: 60vh;
     display: flex;
-    transition: 2s;   
+    transition: 1.5s;   
 }
 .wrapp1 .img{
     background-image: url('../img/chihuahua\ -\ boss_Easy-Resize.com.jpg');
@@ -619,11 +619,11 @@ section#about{
 #about .wrapp2{
     position: absolute;
     top: 120vh;
-    right:0%;
+    right:-100%;
     width: 70vw;
     height: 60vh;
     display: flex;
-    transition: 0.3s;
+    transition: 1.5s;
 }
 
 .wrapp2 .img{
@@ -658,7 +658,7 @@ section#about{
     width: 70vw;
     height: 60vh;
     display: flex;
-    transition: 0.3s;
+    transition: 1.5s;
 }
 
 .wrapp3 .img{
@@ -694,6 +694,8 @@ section#about{
 #about .wrapp3.go{
     left: 0;
 }
+
+
 @media (max-width:1025px){
     #about>h1{
         font-size: 80px;
